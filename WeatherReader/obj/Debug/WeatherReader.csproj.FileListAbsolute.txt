@@ -1,0 +1,1 @@
+c:\users\otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\WeatherReader.exe.config
