@@ -75,10 +75,7 @@
     <Compile Include="WeatherObjectClasses\Main.cs" />
     <Compile Include="MigrationClasses\Migration.cs" />
     <Compile Include="MigrationClasses\MigrationManager.cs" />
-    <Compile Include="WeatherObjectClasses\Rain.cs" />
     <Compile Include="WeatherObjectClasses\Rootobject.cs" />
-    <Compile Include="WeatherObjectClasses\Snow.cs" />
-    <Compile Include="WeatherObjectClasses\Sys.cs" />
     <Compile Include="WeatherObjectClasses\Weather.cs" />
     <Compile Include="WeatherObjectClasses\Wind.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WeatherReader.WeatherObjectClasses
 {
     public class Clouds
-    {
+    {   // Cloudiness
         public int all { get; set; }
     }
 }
