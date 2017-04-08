@@ -1,1 +1,15 @@
 c:\users\otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\WeatherReader.exe.config
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\WeatherReader.exe
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\WeatherReader.pdb
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\Iesi.Collections.dll
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\NHibernate.dll
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\Iesi.Collections.xml
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\bin\Debug\NHibernate.xml
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.csprojResolveAssemblyReference.cache
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.Form1.resources
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.Properties.Resources.resources
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.csproj.GenerateResource.Cache
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.exe
+C:\Users\Otanos\documents\visual studio 2015\Projects\WeatherReader\WeatherReader\obj\Debug\WeatherReader.pdb

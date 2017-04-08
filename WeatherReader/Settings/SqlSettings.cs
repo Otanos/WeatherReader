@@ -8,7 +8,7 @@ namespace WeatherReader.Settings
 {
     public class SqlSettings
     {
-        public string Database;
+        public static string dataBase = Properties.Resources.Database;
 
         public enum QueryType
         {
@@ -20,6 +20,8 @@ namespace WeatherReader.Settings
             CreateTable,
             DropTable
         }
+
+
 
 
     }

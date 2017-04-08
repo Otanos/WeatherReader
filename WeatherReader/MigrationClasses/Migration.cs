@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherReader.WeatherObjectClasses
 {
-    class Migration : MigrationClasses.IMigrationable
+    public abstract class Migration : MigrationClasses.IMigrationable
     {
         public virtual void Down()
         {
