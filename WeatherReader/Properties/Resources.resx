@@ -120,4 +120,7 @@
   <data name="Database" xml:space="preserve">
     <value>WeatherReader</value>
   </data>
+  <data name="Server" xml:space="preserve">
+    <value>Kuba-PC/SQLEXPRESS</value>
+  </data>
 </root>

@@ -68,5 +68,14 @@ namespace WeatherReader.Properties {
                 return ResourceManager.GetString("Database", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kuba-PC/SQLEXPRESS.
+        /// </summary>
+        internal static string Server {
+            get {
+                return ResourceManager.GetString("Server", resourceCulture);
+            }
+        }
     }
 }
