@@ -8,6 +8,11 @@ namespace WeatherReader.WeatherObjectClasses
 {
     class MigrationManager
     {
-        
+        public List<MigrationClasses.IMigrationable> MigrationList;
+
+
+
+
+
     }
 }
