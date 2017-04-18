@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WeatherReader.MigrationClasses.Migrations
 {
-    class Migration_02_CreateTableCityCoord : WeatherObjectClasses.Migration
+    class Migration_00_CreateTableMigration : WeatherObjectClasses.Migration
     {
-        public static string Name = "Create Table to store City Coords data";
-        public static string Table = "CityCoords";
+        public static string Name = "Create Table to store all migration records";
+        public static string Table = "Migrations";
 
         private string UpQuery = string.Format(
             @"
@@ -17,12 +17,12 @@ namespace WeatherReader.MigrationClasses.Migrations
                 GO
                 CREATE TABLE {1}
                 (                    
-	                CoordId uniqueidentifier NOT NULL,
-	                Latitude float,
-	                Longitude float
+	                MigrationId uniqueidentifier NOT NULL,
+	                Table varchar(100),
+	                Description varchar(max)
                 )"
             , Settings.SqlSettings.dataBase
-            , Table); // Add Primary Key and Foreign Key here
+            , Table);
 
         private string DownQuery = string.Format
             (@"

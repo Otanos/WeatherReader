@@ -9,18 +9,20 @@ namespace WeatherReader.MigrationClasses.Migrations
     class Migration_03_CreateTableWinds : WeatherObjectClasses.Migration
     {
         public static string Name = "Create Table to store Winds data";
+        public static string Table = "Winds";
 
         private string UpQuery = string.Format(
             @"
                 USE {0} 
                 GO
-                CREATE TABLE Winds
+                CREATE TABLE {1}
                 (                    
 	                CoordId uniqueidentifier NOT NULL,
 	                Latitude float,
 	                Longitude float
                 )"
-            , Settings.SqlSettings.dataBase); // Add Primary Key and Foreign Key here
+            , Settings.SqlSettings.dataBase
+            , Table); // Add Primary Key and Foreign Key here
 
         private string DownQuery = string.Format
             (@"
@@ -31,12 +33,12 @@ namespace WeatherReader.MigrationClasses.Migrations
 
         public void Up()
         {
-            Settings.SqlSettings.ExecuteCommandQuery(UpQuery);
+            Settings.SqlSettings.ExecuteCommandQuery(UpQuery, Settings.SqlSettings.QueryType.CreateTable);
         }
 
         public void Down()
         {
-            Settings.SqlSettings.ExecuteCommandQuery(DownQuery);
+            Settings.SqlSettings.ExecuteCommandQuery(DownQuery, Settings.SqlSettings.QueryType.DropTable);
         }
     }
 }

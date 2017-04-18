@@ -14,7 +14,14 @@ namespace WeatherReader
     {
         public Form1()
         {
+            Settings.SqlSettings.ConnectionTest();
+
             InitializeComponent();
+        }
+
+        private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            // not implemented
         }
     }
 }

@@ -20,6 +20,8 @@ namespace WeatherReader.Settings
 
         private static SqlCommand _command;
 
+        public static SqlDataReader Reader;
+
         public enum QueryType
         {
             Select,
@@ -71,16 +73,51 @@ namespace WeatherReader.Settings
             }
         }
 
-        public static void ExecuteCommandQuery(string query)
+        public static void ExecuteCommandQuery(string query, QueryType type)
         {
             OpenConnection();
 
-            _command = new SqlCommand(query, _connection);
-            _command.CommandType = CommandType.Text;
-            _command.ExecuteNonQuery();
+            switch (type)
+            {
+                case QueryType.CreateTable:
+
+                    _command = new SqlCommand(query, _connection);
+                    _command.CommandType = CommandType.Text;
+                    _command.ExecuteNonQuery();
+
+                    break;
+
+                case QueryType.Select:
+
+                    _command = new SqlCommand(query, _connection);
+                    _command.CommandType = CommandType.Text;
+                    Reader = _command.ExecuteReader();
+
+                    break;
+
+                case QueryType.DropTable:
+
+                    _command = new SqlCommand(query, _connection);
+                    _command.CommandType = CommandType.Text;
+                    _command.ExecuteNonQuery();
+
+                    break;
+
+                case QueryType.Insert:
+                    //not implemented
+                    break;
+            }
+            
+            CloseConnection();
+        }
+
+        public static void ConnectionTest()
+        {
+            OpenConnection();
 
             CloseConnection();
         }
+
 
     }
 }
