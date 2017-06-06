@@ -12,12 +12,7 @@ namespace WeatherReader.Core
     class Deserializer
     {
         private string json;
-
-        private JObject responseObject;
-
-        private JToken responseToken;
-
-        private JArray responseArray;
+        
 
         public string JSON
         {
@@ -31,26 +26,11 @@ namespace WeatherReader.Core
 
         }
 
-        public Rootobject DeserializeJSON()
+        public RootWeather DeserializeJSON()
         {
+            var RootWeather = JsonConvert.DeserializeObject<RootWeather>(json);
 
-
-            responseObject = JObject.Parse(json);
-
-            Rootobject Weather = new Rootobject();
-
-            //Weather.City.name = responseObject["list"].Children()["name"].Value<string>();        
-            //Weather.City.name = responseJSON["list"]["name"].ToString();           
-            //Weather.Main = responseObject["list"]["main"].ToObject<Main>();
-            //return JsonConvert.DeserializeObject<Rootobject>(json);
-
-            responseArray = (JArray)responseObject.SelectToken("list");
-
-            responseToken = (JToken)responseArray.SelectToken("main");
-
-            Weather = responseToken.ToObject<Rootobject>();
-
-            return Weather;
+            return RootWeather;
         }
         
     }

@@ -78,12 +78,16 @@
     <Compile Include="Settings\Places.cs" />
     <Compile Include="Settings\PlacesHolder.cs" />
     <Compile Include="Settings\SqlSettings.cs" />
-    <Compile Include="WeatherObjectClasses\City.cs" />
+    <Compile Include="WeatherObjectClasses\Clouds.cs" />
+    <Compile Include="WeatherObjectClasses\Coord.cs" />
     <Compile Include="WeatherObjectClasses\List.cs" />
     <Compile Include="WeatherObjectClasses\Main.cs" />
     <Compile Include="MigrationClasses\Migration.cs" />
     <Compile Include="MigrationClasses\MigrationManager.cs" />
-    <Compile Include="WeatherObjectClasses\Rootobject.cs" />
+    <Compile Include="WeatherObjectClasses\Sys.cs" />
+    <Compile Include="WeatherObjectClasses\RootWeather.cs" />
+    <Compile Include="WeatherObjectClasses\Weather.cs" />
+    <Compile Include="WeatherObjectClasses\Wind.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
