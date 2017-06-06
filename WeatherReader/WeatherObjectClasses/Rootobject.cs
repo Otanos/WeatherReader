@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace WeatherReader.WeatherObjectClasses
 {
-    public class Rootobject
+    class Rootobject
     {
-        public List[] list { get; set; }
-        public City city { get; set; }
+        public Main Main { get; set; }
+        public City City { get; set; }
+
+        public Rootobject()
+        {
+            Main = new Main();
+            City = new City();
+        }
     }
 }

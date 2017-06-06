@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WeatherReader.MigrationClasses.Migrations;
 
 namespace WeatherReader.WeatherObjectClasses
@@ -11,64 +12,30 @@ namespace WeatherReader.WeatherObjectClasses
     {
         public List<MigrationClasses.IMigrationable> Migrations;
 
-
         public MigrationManager()
         {
             Migrations = new List<MigrationClasses.IMigrationable>();
-
-            Migrations.Add(new Migration_00_CreateTableMigration());
-
-            Migrations.Add(new Migration_01_CreateTableCity());
-
-            Migrations.Add(new Migration_02_CreateTableCityCoord());
-
-            Migrations.Add(new Migration_03_CreateTableWinds());
+            
+            Migrations.Add(new Migration_01_CreateTablePlaces());
+            Migrations.Add(new Migration_02_CreateTableWeather());
         }
 
-        private int GetMigrationIndex()
+        public void RunMigrationsUp()
         {
-            int index = 0;
-
-            string query = string.Format(@"
-                USE {0}
-                GO
-                SELECT * FROM Migrations"
-                , Settings.SqlSettings.dataBase);
-
-            Settings.SqlSettings.ExecuteCommandQuery(query, Settings.SqlSettings.QueryType.Select);
-
-            if (Settings.SqlSettings.Reader.HasRows)
+            try
             {
-                while (Settings.SqlSettings.Reader.Read())
+                if (Core.SQL.TableExists("Places"))
                 {
-                    index++;
-                }
-
-                return index;
+                    foreach(MigrationClasses.IMigrationable DataMigration in Migrations)
+                    {
+                        DataMigration.Up();
+                    }
+                }             
             }
-            else
+            catch(Exception ex)
             {
-                return 0;
-            } 
+                MessageBox.Show(ex.Message + ". Check your connection with SQL Server", "Migration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
-
-        public void RunMigrationsUp(int index)
-        {
-            for(int x=0; x < index; x++)
-            {
-                Migrations[x].Up();
-            }
-        }
-
-        public void RunMigrationsDown(int index)
-        {
-            for(int x=index; x >= 0; x--)
-            {
-                Migrations[x].Down();
-            }
-        }
-
-
-
     }
 }
