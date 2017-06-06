@@ -47,7 +47,7 @@
             // 
             this.DataField.Location = new System.Drawing.Point(187, 12);
             this.DataField.Name = "DataField";
-            this.DataField.Size = new System.Drawing.Size(213, 282);
+            this.DataField.Size = new System.Drawing.Size(339, 282);
             this.DataField.TabIndex = 2;
             this.DataField.Text = "";
             // 
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 340);
+            this.ClientSize = new System.Drawing.Size(538, 304);
             this.Controls.Add(this.CityDropdown);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SaveButton);

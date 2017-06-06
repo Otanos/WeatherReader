@@ -26,11 +26,6 @@ namespace WeatherReader
             Weather = Deserializer.DeserializeJSON();
         }
 
-        private void PrepareList()
-        {
-            //DataList.Add(string.Format("City: {0}",Weather.City.name));
-        }
-
         public void Show(System.Windows.Forms.RichTextBox Screen)
         {
             GetDeserializedObject();
@@ -40,20 +35,17 @@ namespace WeatherReader
 
             int celcius = ((int)Weather.List.Select(t => t.Main.Temp).FirstOrDefault() - 273);
            
-            string ToShow = string.Format(@"
-            CURRENT WEATHER
-            Date: {0}
-            Time: {1}
-            City: {2}
-            Description: {3}
-            Temperature (Kelvins): {4} K
-            Temperature (Celcius): {5} C
-            Pressure: {6} hPa
-            Humidity: {7} %
-            Clouds: {8} %
-            Wind Speed: {9} m/s",
-                dtDateTime.Date,
-                dtDateTime.TimeOfDay,
+            string ToShow = string.Format(@"CURRENT WEATHER
+Date and Time: {0}
+City: {1}
+Description: {2}
+Temperature (Kelvins): {3} K
+Temperature (Celcius): {4} C
+Pressure: {5} hPa
+Humidity: {6} %
+Clouds: {7} %
+Wind Speed: {8} m/s",
+                dtDateTime,
                 Weather.List.Select(x => x.Name).FirstOrDefault(),
                 Weather.List.Select(d => d.Weather.Select(m => m.Description).FirstOrDefault()).FirstOrDefault(),
                 Weather.List.Select(t => t.Main.Temp).FirstOrDefault(),

@@ -40,55 +40,10 @@ namespace WeatherReader
             {
                 string cityid = Cities.GetIdByCityName(Cities.Current);
 
-                //Core.RequestHandler.GetWeather(cityid);
+                Core.RequestHandler.GetWeather(cityid);
 
-                //DataField.AppendText(Core.RequestHandler.GetResponse);                
+                Presenter.Deserializer.JSON = Core.RequestHandler.GetResponse;
 
-                Presenter.Deserializer.JSON = @"{
-                            'cnt':1,
-                            'list':[{
-	                            'coord':{
-		                            'lon':18.55,
-		                            'lat':50.11
-
-                                },
-	                            'sys':{
-		                            'type':1,
-		                               'id':5356,
-		'message':0.0095,
-		'country':'PL',
-		'sunrise':1496630290,
-		'sunset':1496688673
-	},
-	'weather':[{
-		'id':800,
-		'main':'Clear',
-		'description':'clear sky',
-		'icon':'01d'
-	}],
-	'main':{
-		'temp':293.71,
-		'pressure':1014,
-		'humidity':42,
-		'temp_min':293.15,
-		'temp_max':294.15
-	},
-	'visibility':10000,
-	'wind':{
-		'speed':4.1,
-		'deg':60
-	},
-	'clouds':{
-		'all':0
-	},
-	'dt':1496686603,
-	'id':7531758,
-	'name':'Rybnik'
-}]
-}";
-
-                //Presenter.Deserializer.JSON = Core.RequestHandler.GetResponse;
-                 
                 Presenter.Show(DataField);
             }
             else
