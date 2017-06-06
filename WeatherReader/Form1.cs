@@ -29,11 +29,6 @@ namespace WeatherReader
             Cities.Show(CityDropdown);            
         }
 
-        private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            // not implemented
-        }
-
         private void CheckWeatherButton_Click(object sender, EventArgs e)
         {
             if (Cities.IsSelected())

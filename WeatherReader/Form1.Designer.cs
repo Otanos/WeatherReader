@@ -41,7 +41,6 @@
             this.Calendar.Location = new System.Drawing.Point(18, 12);
             this.Calendar.Name = "Calendar";
             this.Calendar.TabIndex = 0;
-            this.Calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateChanged);
             // 
             // DataField
             // 
