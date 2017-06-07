@@ -11,13 +11,10 @@ namespace WeatherReader
     {
         public Core.Deserializer Deserializer;
 
-        private List<string> DataList;
-
         public RootWeather Weather;
 
         public DataPresenter()
         {
-            DataList = new List<string>();
             Deserializer = new Core.Deserializer();
         }
 

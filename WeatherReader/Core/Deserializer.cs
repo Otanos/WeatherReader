@@ -12,7 +12,6 @@ namespace WeatherReader.Core
     class Deserializer
     {
         private string json;
-        
 
         public string JSON
         {
@@ -23,7 +22,6 @@ namespace WeatherReader.Core
         public Deserializer()
         {
             JSON = string.Empty;
-
         }
 
         public RootWeather DeserializeJSON()
